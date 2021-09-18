@@ -1,0 +1,28 @@
+{
+  "name": "bs-recolor",
+  "version": "1.0.0",
+  "description": "A recolor engine to easily theme your Bootstrap projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/computergnome99/bs-recolor.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "theme",
+    "bootstrap",
+    "5"
+  ],
+  "author": "Calvin Bonner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/computergnome99/bs-recolor/issues"
+  },
+  "homepage": "https://github.com/computergnome99/bs-recolor#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.1"
+  }
+}

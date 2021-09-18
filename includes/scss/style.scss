@@ -1,0 +1,14 @@
+.content {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.color-preview {
+    height: 100%;
+
+    aspect-ratio: 1/1;
+
+    background-color: black;
+}
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';

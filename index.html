@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Recolor</title>
+    <link rel="stylesheet" href="/includes/css/style.css">
+    <script src="https://kit.fontawesome.com/fef47d6091.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="content">
+        <h1 class="display-1 text-primary">Welcome to Bootstrap Recolor</h1>
+        <p>Select your theme colors below. By default, these colors are set to the Bootstrap 5 colors.</p>
+
+        <div class="card shadow-lg rounded-3 px-2 py-3">
+            <div class="card-title d-flex justify-content-between">
+                <h2>Colors</h2>
+                <button class="btn btn-light"><i class="fas fa-rotate-right"></i></button>
+            </div>
+            <form>
+                <div class="d-flex gap-2" style="height: 32px;">
+                    <div class="color-preview rounded-3"></div>
+                    <input class="form-control" type="text" name="color" placeholder="#000000">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
