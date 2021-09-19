@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/includes/css/style.css">
     <script src="https://kit.fontawesome.com/fef47d6091.js" crossorigin="anonymous"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="content">
@@ -19,7 +20,7 @@
                 <h2>Bootstrap Colors</h2>
                 <button class="btn btn-light"><i class="fas fa-rotate-right"></i></button>
             </div>
-            <form id="parentNode" class="d-flex flex-sm-wrap gap-3 needs-validation" novalidate>
+            <form id="parentNode" class="d-flex flex-sm-wrap gap-3 needs-validation justify-content-between" novalidate>
 
                 <div id="templateNode" class="d-flex flex-column">
 
@@ -35,7 +36,7 @@
                         </div>
                     </div>
                     
-                    <div class="input-group d-flex gap-2" style="width: 18rem;">
+                    <div class="input-group d-flex gap-2" style="width: 21rem;">
                         <input class="form-control form-control-color rounded-3  flex-grow-0" type="color" name="color-primary-chip" value="#000000" oninput="updateColor(event)">
                         <input class="form-control rounded-3" type="text" name="color-primary" value="#000000" placeholder="#000000" oninput="updateColor(event)" autocomplete="off" required>
                         <div class="invalid-feedback">

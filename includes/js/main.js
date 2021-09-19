@@ -1,11 +1,27 @@
 //duplicate colors
 const templateNode = document.getElementById('templateNode');
 const parentNode = document.getElementById('parentNode');
+templateNode.remove();
 
-for(var i = 0; i < 8; i ++) {
-    const newNode = templateNode.cloneNode(true);
-    parentNode.appendChild(newNode);
-}
+
+var items = [];
+
+$.getJSON("/includes/json/defaults.json", function(data) {
+    $.each(data['bs-5'], function(key, val) {
+        items.push({key, val});
+
+        const newNode = templateNode.cloneNode(true);
+        newNode.id = 'bs-color-' + key;
+        newNode.querySelector('label').innerText = key.charAt(0).toUpperCase() + key.slice(1);
+        newNode.querySelector('label').htmlFor = 'color-' + key;
+        newNode.querySelector('[type="color"]').value = val.toUpperCase();
+        newNode.querySelector('[type="color"]').name = 'color-' + key;
+        newNode.querySelector('[type="text"]').value = val.toUpperCase();
+        newNode.querySelector('[type="color"]').name = 'color-' + key + '-chip';
+
+        parentNode.appendChild(newNode);
+    });
+});
 
 // update colors
 function updateColor(e) {
