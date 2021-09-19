@@ -4,27 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Recolor</title>
+    <title>bs-recolor</title>
     <link rel="stylesheet" href="/includes/css/style.css">
     <script src="https://kit.fontawesome.com/fef47d6091.js" crossorigin="anonymous"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div class="content">
-        <h1 class="display-1 text-primary">Welcome to Bootstrap Recolor</h1>
-        <p>Select your theme colors below. By default, these colors are set to the Bootstrap 5 colors.</p>
+        <h1 class="display-2 text-primary text-center">Welcome to bs-recolor!</h1>
+        <h4 class="text-secondary mb-4 text-center">Let's create an awesome new theme.</h4>
 
-        <div class="card shadow-lg rounded-3 px-2 py-3">
+        <div class="card shadow-lg rounded-3 p-3 pb-4">
             <div class="card-title d-flex justify-content-between">
-                <h2>Colors</h2>
+                <h2>Bootstrap Colors</h2>
                 <button class="btn btn-light"><i class="fas fa-rotate-right"></i></button>
             </div>
-            <form>
-                <div class="d-flex gap-2" style="height: 32px;">
-                    <div class="color-preview rounded-3"></div>
-                    <input class="form-control" type="text" name="color" placeholder="#000000">
+            <form id="parentNode" class="d-flex flex-sm-wrap gap-3 needs-validation" novalidate>
+
+                <div id="templateNode" class="d-flex flex-column">
+
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <label for="color-template" class="form-label mb-0">template</label>
+                        <div class="dropright">
+                            <button class="btn btn-light btn-sm" id="bs-template-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-vertical"></i></button>
+                            <ul class="dropdown-menu" aria-labelledby="bs-template-dropdown">
+                                <li><button type="button" class="dropdown-item"><i class="far fa-rotate-right me-3"></i>Reset to Default</button></li>
+                                <div class="dropdown-divider"></div>
+                                <li><button type="button" class="dropdown-item link-danger"><i class="far fa-trash me-3"></i>Delete</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group d-flex gap-2" style="width: 18rem;">
+                        <input class="form-control form-control-color rounded-3  flex-grow-0" type="color" name="color-primary-chip" value="#000000" oninput="updateColor(event)">
+                        <input class="form-control rounded-3" type="text" name="color-primary" value="#000000" placeholder="#000000" oninput="updateColor(event)" autocomplete="off" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid hex code. <em>(e.g. #000000)</em>
+                        </div>
+                    </div>
+                    
                 </div>
+
             </form>
         </div>
     </div>
+
+    <script src="/includes/js/main.js"></script>
 </body>
 </html>
