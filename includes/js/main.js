@@ -68,11 +68,15 @@ function lockColor(targetId) {
         if (lockedState == false) {
             element.querySelector('.lock-control').querySelector('span').innerText = 'Lock color';
             element.querySelector('.lock-control').querySelector('i').classList.replace('fa-lock-keyhole-open', 'fa-lock-keyhole');
+            element.querySelector('.reset-control').disabled = false;
             element.querySelector('label').querySelector('i').classList.add('d-none');
+            element.querySelector('label').classList.remove('text-secondary');
         } else {
             element.querySelector('.lock-control').querySelector('span').innerText = 'Unlock color';
             element.querySelector('.lock-control').querySelector('i').classList.replace('fa-lock-keyhole', 'fa-lock-keyhole-open');
+            element.querySelector('.reset-control').disabled = true;
             element.querySelector('label').querySelector('i').classList.remove('d-none');
+            element.querySelector('label').classList.add('text-secondary');
         }
     }
 }

@@ -37,7 +37,7 @@
                         <div class="dropdown">
                             <button class="btn btn-light btn-sm" id="bs-template-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-vertical"></i></button>
                             <ul class="dropdown-menu" aria-labelledby="bs-template-dropdown">
-                                <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#resetSingleModal"><i class="far fa-rotate-right me-3"></i>Reset to Default</button></li>
+                                <li><button type="button" class="dropdown-item reset-control" data-bs-toggle="modal" data-bs-target="#resetSingleModal"><i class="far fa-rotate-right me-3"></i>Reset to Default</button></li>
                                 <li><button type="button" class="dropdown-item lock-control" onclick="lockColor('templateNode')"><i class="far fa-lock-keyhole me-3"></i><span>Lock Color</span></button></li>
                                 <!-- <div class="dropdown-divider"></div> -->
                                 <!-- <li><button type="button" class="dropdown-item link-danger"><i class="far fa-trash me-3"></i>Delete</button></li> -->
@@ -80,11 +80,11 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Reset Colors?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Reset Bootstrap Colors?</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Are you sure you want to all unlocked colors? This action will be permanent and cannot be undone.
+                    Are you sure you want to reset all <b>unlocked</b> Bootstrap colors? This action will be permanent and cannot be undone.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
