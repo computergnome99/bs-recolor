@@ -3,6 +3,11 @@ $primary: #2D2D2D;
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 // @import url(../../node_modules/bootstrap/dist/css/bootstrap.min.css);
 
+*::selection {
+    background-color: $primary;
+    color: white;
+}
+
 .content {
     max-width: 1080px;
     margin: 0 auto;

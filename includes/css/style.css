@@ -10640,6 +10640,11 @@ fieldset:disabled .btn {
   }
 }
 
+*::selection {
+  background-color: #2D2D2D;
+  color: white;
+}
+
 .content {
   max-width: 1080px;
   margin: 0 auto;

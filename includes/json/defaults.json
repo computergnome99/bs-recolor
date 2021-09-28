@@ -21,6 +21,7 @@
     },
     "bs-3": {
         "primary": "#337AB7",
+        "secondary": "#6C757D",
         "success": "#5CB85C",
         "info": "#5BC0DE",
         "warning": "#F0AD4E",
