@@ -30,8 +30,8 @@
             <hr>
             <form id="parentNode" class="d-flex flex-wrap gap-3 needs-validation justify-content-between" novalidate>
 
+                <!-- Template Start -->
                 <div id="templateNode" class="d-flex flex-column flex-grow-1 flex-shrink-0 bs-color">
-
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <label for="color-template" class="form-label mb-0">template</label>
                         <div class="dropdown">
@@ -43,7 +43,6 @@
                             </ul>
                         </div>
                     </div>
-                    
                     <div class="input-group d-flex gap-2 flex-grow-1">
                         <input class="form-control form-control-color rounded-3  flex-grow-0" type="color" name="color-primary-chip" value="#000000" oninput="updateColor(event)">
                         <input class="form-control rounded-3" type="text" name="color-primary" value="#000000" placeholder="#000000" oninput="updateColor(event)" autocomplete="off" required>
@@ -51,8 +50,8 @@
                             Please enter a valid hex code. <em>(e.g. #000000)</em>
                         </div>
                     </div>
-                    
                 </div>
+                <!-- Template End -->
 
             </form>
         </div>
