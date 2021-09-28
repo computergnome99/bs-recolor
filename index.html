@@ -19,7 +19,7 @@
         <div class="card shadow-lg rounded-3 p-3 pb-4">
             <div class="card-title d-flex justify-content-between">
                 <h2>Bootstrap Colors</h2>
-                <button class="btn btn-light"><i class="fas fa-rotate-right"></i></button>
+                <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#resetAllModal"><i class="fas fa-rotate-right"></i></button>
             </div>
             <label class="form-label" for="bs-version">Select a version of Bootstrap to use as a template:</label>
             <select class="form-select" name="bs-version" id="bs-version">
@@ -60,21 +60,39 @@
 
     <div class="modal fade" id="resetSingleModal" tabindex="-1" aria-labelledby="resetSingleModal" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Reset Color?</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reset Color?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to reset this color? This action will be permanent and cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Reset Color</button>
+                </div>
             </div>
-            <div class="modal-body">
-              Are you sure you want to reset this color? This action will be permanent and cannot be undone.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-danger">Reset Color</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
+
+    <div class="modal fade" id="resetAllModal" tabindex="-1" aria-labelledby="resetAllModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reset Colors?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to reset all of these colors? This action will be permanent and cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Reset Colors</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="/includes/js/main.js"></script>
 </body>
