@@ -14,12 +14,13 @@ function updateBsColors() {
     
             const newNode = templateNode.cloneNode(true);
             newNode.id = 'bs-color-' + key;
-            newNode.querySelector('label').innerText = key.charAt(0).toUpperCase() + key.slice(1);
+            newNode.querySelector('label').querySelector('span').innerText = key.charAt(0).toUpperCase() + key.slice(1);
             newNode.querySelector('label').htmlFor = 'color-' + key;
             newNode.querySelector('[type="color"]').value = val.toUpperCase();
             newNode.querySelector('[type="color"]').name = 'color-' + key;
             newNode.querySelector('[type="text"]').value = val.toUpperCase();
             newNode.querySelector('[type="color"]').name = 'color-' + key + '-chip';
+            newNode.querySelector('.lock-control').onclick = function() {lockColor('bs-color-' + key)};
     
             parentNode.appendChild(newNode);
         });
@@ -57,4 +58,21 @@ bsVersionDropdown.addEventListener('change', function(e) {
         elem.remove();
     }
     updateBsColors();
-})
+});
+
+function lockColor(targetId) {
+    let element = document.getElementById(targetId);
+    if (element !== null) {
+        let lockedState = !(element.dataset.locked === 'true');
+        element.dataset.locked = lockedState;
+        if (lockedState == false) {
+            element.querySelector('.lock-control').querySelector('span').innerText = 'Lock color';
+            element.querySelector('.lock-control').querySelector('i').classList.replace('fa-lock-keyhole-open', 'fa-lock-keyhole');
+            element.querySelector('label').querySelector('i').classList.add('d-none');
+        } else {
+            element.querySelector('.lock-control').querySelector('span').innerText = 'Unlock color';
+            element.querySelector('.lock-control').querySelector('i').classList.replace('fa-lock-keyhole', 'fa-lock-keyhole-open');
+            element.querySelector('label').querySelector('i').classList.remove('d-none');
+        }
+    }
+}
