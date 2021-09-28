@@ -8,5 +8,22 @@
         "danger": "#dc3545",
         "light": "#f8f9fa",
         "dark": "#212529"
+    },
+    "bs-4": {
+        "primary": "#007BFF",
+        "secondary": "#6C757D",
+        "success": "#28A745",
+        "info": "#17A2B8",
+        "warning": "#FFC107",
+        "danger": "#DC3545",
+        "light": "#F8F9FA",
+        "dark": "#343A40"
+    },
+    "bs-3": {
+        "primary": "#337AB7",
+        "success": "#5CB85C",
+        "info": "#5BC0DE",
+        "warning": "#F0AD4E",
+        "danger": "#D9534F"
     }
 }

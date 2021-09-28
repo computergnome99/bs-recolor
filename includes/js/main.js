@@ -7,7 +7,7 @@ templateNode.remove();
 var items = [];
 
 $.getJSON("/includes/json/defaults.json", function(data) {
-    $.each(data['bs-5'], function(key, val) {
+    $.each(data['bs-3'], function(key, val) {
         items.push({key, val});
 
         const newNode = templateNode.cloneNode(true);
