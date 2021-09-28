@@ -1,4 +1,7 @@
+$primary: #2D2D2D;
+
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+// @import url(../../node_modules/bootstrap/dist/css/bootstrap.min.css);
 
 .content {
     max-width: 1080px;
@@ -7,4 +10,8 @@
 
 .form-control-color {
     width: 40px !important;
+}
+
+.dropdown-menu.show {
+    transform: translate(0, 33px) !important;
 }
