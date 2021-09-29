@@ -14,12 +14,13 @@ function updateBsColors() {
     
             const newNode = templateNode.cloneNode(true);
             newNode.id = 'bs-color-' + key;
-            newNode.querySelector('label').querySelector('span').innerText = key.charAt(0).toUpperCase() + key.slice(1);
-            newNode.querySelector('label').htmlFor = 'color-' + key;
+            newNode.querySelector('.form-label').querySelector('span').innerText = key.charAt(0).toUpperCase() + key.slice(1);
             newNode.querySelector('[type="color"]').value = val.toUpperCase();
-            newNode.querySelector('[type="color"]').name = 'color-' + key;
-            newNode.querySelector('[type="text"]').value = val.toUpperCase();
             newNode.querySelector('[type="color"]').name = 'color-' + key + '-chip';
+            newNode.querySelector('[type="color"]').ariaLabel = 'color-' + key + '-chip';
+            newNode.querySelector('[type="text"]').value = val.toUpperCase();
+            newNode.querySelector('[type="text"]').name = 'color-' + key;
+            newNode.querySelector('[type="text"]').ariaLabel = 'color-' + key;
             newNode.querySelector('.lock-control').onclick = function() {lockColor('bs-color-' + key)};
     
             parentNode.appendChild(newNode);
@@ -69,14 +70,14 @@ function lockColor(targetId) {
             element.querySelector('.lock-control').querySelector('span').innerText = 'Lock color';
             element.querySelector('.lock-control').querySelector('i').classList.replace('fa-lock-keyhole-open', 'fa-lock-keyhole');
             element.querySelector('.reset-control').disabled = false;
-            element.querySelector('label').querySelector('i').classList.add('d-none');
-            element.querySelector('label').classList.remove('text-secondary');
+            element.querySelector('.form-label').querySelector('i').classList.add('d-none');
+            element.querySelector('.form-label').classList.remove('text-secondary');
         } else {
             element.querySelector('.lock-control').querySelector('span').innerText = 'Unlock color';
             element.querySelector('.lock-control').querySelector('i').classList.replace('fa-lock-keyhole', 'fa-lock-keyhole-open');
             element.querySelector('.reset-control').disabled = true;
-            element.querySelector('label').querySelector('i').classList.remove('d-none');
-            element.querySelector('label').classList.add('text-secondary');
+            element.querySelector('.form-label').querySelector('i').classList.remove('d-none');
+            element.querySelector('.form-label').classList.add('text-secondary');
         }
     }
 }

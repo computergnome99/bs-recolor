@@ -17,12 +17,12 @@
             <img src="/includes/images/bs-recolor.png" alt="bs-recolor logo" width="96px">
         </div>
         <h1 class="display-2 text-primary text-center">Welcome to <span style="color: #6f42c1">bs-recolor</span>!</h1>
-        <h4 class="text-secondary mb-4 text-center">Let's create an awesome new theme.</h4>
+        <p class="text-secondary fs-4 mb-4 text-center">Let's create an awesome new theme.</p>
 
         <div class="card shadow-lg rounded-3 p-3 pb-4">
             <div class="card-title d-flex justify-content-between">
                 <h2>Bootstrap Colors</h2>
-                <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#resetAllModal"><i class="fas fa-rotate-right"></i></button>
+                <button class="btn btn-light" aria-label="refresh all colors" data-bs-toggle="modal" data-bs-target="#resetAllModal"><i class="fas fa-rotate-right"></i></button>
             </div>
             <label class="form-label" for="bs-version">Select a version of Bootstrap to use as a template:</label>
             <select class="form-select" name="bs-version" id="bs-version">
@@ -36,20 +36,22 @@
                 <!-- Template Start -->
                 <div id="templateNode" class="d-flex flex-column flex-grow-1 flex-shrink-0 bs-color" data-locked="false">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                        <label for="color-template" class="form-label mb-0"><i class="text-primary far fa-lock-keyhole me-2 d-none"></i><span>template</span></label>
+                        <p class="form-label mb-0"><i class="text-primary far fa-lock-keyhole me-2 d-none"></i><span>template</span></p>
                         <div class="dropdown">
-                            <button class="btn btn-light btn-sm" id="bs-template-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-vertical"></i></button>
+                            <button class="btn btn-light btn-sm" id="bs-template-dropdown" type="button" role="button" aria-label="refresh color" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-ellipsis-vertical"></i>
+                            </button>
                             <ul class="dropdown-menu" aria-labelledby="bs-template-dropdown">
-                                <li><button type="button" class="dropdown-item reset-control" data-bs-toggle="modal" data-bs-target="#resetSingleModal"><i class="far fa-rotate-right me-3"></i>Reset to Default</button></li>
-                                <li><button type="button" class="dropdown-item lock-control" onclick="lockColor('templateNode')"><i class="far fa-lock-keyhole me-3"></i><span>Lock Color</span></button></li>
+                                <li><button type="button" class="dropdown-item reset-control" role="button" data-bs-toggle="modal" data-bs-target="#resetSingleModal"><i class="far fa-rotate-right me-3"></i>Reset to Default</button></li>
+                                <li><button type="button" class="dropdown-item lock-control" role="button" onclick="lockColor('templateNode')"><i class="far fa-lock-keyhole me-3"></i><span>Lock Color</span></button></li>
                                 <!-- <div class="dropdown-divider"></div> -->
                                 <!-- <li><button type="button" class="dropdown-item link-danger"><i class="far fa-trash me-3"></i>Delete</button></li> -->
                             </ul>
                         </div>
                     </div>
                     <div class="input-group d-flex gap-2 flex-grow-1">
-                        <input class="form-control form-control-color rounded-3  flex-grow-0" type="color" name="color-primary-chip" value="#000000" oninput="updateColor(event)">
-                        <input class="form-control rounded-3" type="text" name="color-primary" value="#000000" placeholder="#000000" oninput="updateColor(event)" autocomplete="off" required>
+                        <input class="form-control form-control-color rounded-3  flex-grow-0" type="color" name="color-primary-chip" value="#000000" oninput="updateColor(event)" aria-label="color-primary-chip">
+                        <input class="form-control rounded-3" type="text" name="color-primary" value="#000000" placeholder="#000000" oninput="updateColor(event)" autocomplete="off" aria-label="color-primary-chip" required>
                         <div class="invalid-feedback">
                             Please enter a valid hex code. <em>(e.g. #000000)</em>
                         </div>
