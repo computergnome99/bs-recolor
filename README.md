@@ -17,3 +17,9 @@ To install and make updates to this project, you will need to:
 &nbsp;
 
 Please let me know if you have any suggested features.
+
+---
+
+[Report a bug](https://github.com/computergnome99/bs-recolor/issues)
+
+[Support me](https://ko-fi.com/calvinbonner)
