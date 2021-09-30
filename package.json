@@ -4,7 +4,9 @@
   "description": "A recolor engine to easily theme your Bootstrap projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss-compile": "node-sass -rw includes/scss -o includes/css",
+    "watch": "npm run scss-compile"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,11 @@
   },
   "homepage": "https://github.com/computergnome99/bs-recolor#readme",
   "dependencies": {
-    "bootstrap": "^5.1.1"
+    "bootstrap": "^5.1.1",
+    "node-sass": "^6.0.1",
+    "scss-compile": "^0.1.7"
+  },
+  "assets": {
+    "css": "/css/"
   }
 }
