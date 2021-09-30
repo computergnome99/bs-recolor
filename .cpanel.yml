@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/gcpqtm5stykz/public_html/calvinbonner.com/demos/bs-recolor/
-    - npm install $DEPLOYPATH
-    - npm run scss-compile $DEPLOYPATH
+    - /bin/cp npm install $DEPLOYPATH
+    - /bin/cp npm run scss-compile $DEPLOYPATH
